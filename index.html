@@ -52,7 +52,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-headline">Эффективные решения<br />для вашего бизнеса</h1>
-          <button class="modal-button" type="button">Заказать услугу</button>
+          <button class="modal-button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -331,30 +331,30 @@
         <div class="social-block-footer">
           <h3 class="slogan">присоединяйтесь</h3>
           <ul class="social-list-footer list">
-            <li class="social-item-foter">
-              <a class="social-link-foter" href="">
-                <svg class="social-link-foter-svg">
+            <li class="social-item-footer">
+              <a class="social-link-footer" href="">
+                <svg class="social-link-footer-svg">
                   <use href="./images/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="social-item-foter">
-              <a class="social-link-foter" href="">
-                <svg class="social-link-foter-svg">
+            <li class="social-item-footer">
+              <a class="social-link-footer" href="">
+                <svg class="social-link-footer-svg">
                   <use href="./images/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="social-item-foter">
-              <a class="social-link-foter" href="">
-                <svg class="social-link-foter-svg">
+            <li class="social-item-footer">
+              <a class="social-link-footer" href="">
+                <svg class="social-link-footer-svg">
                 <use href="./images/sprite.svg#icon-facebook"></use>
               </svg>
               </a>
             </li>
-            <li class="social-item-foter">
-              <a class="social-link-foter" href="">
-                <svg class="social-link-foter-svg">
+            <li class="social-item-footer">
+              <a class="social-link-footer" href="">
+                <svg class="social-link-footer-svg">
                   <use href="./images/sprite.svg#icon-linkedin"></use>
                 </svg>
               </a>
@@ -363,5 +363,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-button" data-modal-close>
+          <svg width="17px" height="17px" class="icon-close-button">
+            <use href="./images/sprite.svg#icon-close-button"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

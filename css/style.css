@@ -15,6 +15,7 @@
   --border-line-color: #ECECEC;
   --social-icons-color: #afb1b8; 
 }
+/*====COMPONENTS====*/
 html {
   box-sizing: border-box;
 }
@@ -92,6 +93,56 @@ img {
   padding: 0 15px;
   margin: 0 auto;
 }
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 500ms linear;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 500ms linear 500ms; 
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 500ms linear 0ms;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  height: 581px;
+  background: var(--titel-accent-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: all 500ms linear 250ms;
+}
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--titel-accent-bg-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius:50%;
+  cursor: pointer;
+}
+.icon-close-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 /* ======== HEADER ======== */
 .header {
@@ -186,7 +237,7 @@ img {
 .navigation-list-link::after {
   content:"";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   display: flex;
   width: 100%;
@@ -579,10 +630,10 @@ img {
   display: flex; 
 } 
 
-.social-item-foter:not(:last-child) {
+.social-item-footer:not(:last-child) {
   margin-right: 10px;
 }
-.social-link-foter {
+.social-link-footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -594,11 +645,11 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-link-foter:hover, 
-.social-link-foter:focus {
+.social-link-footer:hover, 
+.social-link-footer:focus {
   background-color: var(--bright-accent-color);
 }
-.social-link-foter-svg {
+.social-link-footer-svg {
   fill: var(--titel-accent-bg-color);
   width: 20px;
   height: 20px;
@@ -610,6 +661,7 @@ img {
 /* ======== END FOOTER ======== */
 
 /* ======== PORTFOLIO-Filter-Buttons ======== */
+
 .option-button {
   display: inline-block;
   padding: 6px 22px;
